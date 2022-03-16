@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">´
+  <meta name="description" content="Site com um contador para eventos">
+
+  <title>Countdown</title>
+  
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="./images/top-image.svg" alt="Imagem de topo da página">
+  </header>
+
+  <main>
+    <div class="countdown">
+      <h1>Ready to launch in...</h1>
+      <section class="time-container">
+        <div class="time">
+          <div id="day-container">
+            <p>Dia(s)</p>
+            <h2 id="day"></h2>
+          </div>
+          <p>:</p>
+          <div id="hour-container">
+            <p>Hora(s)</p>
+            <h2 id="hour"></h2>
+          </div>
+          <p>:</p>
+          <div id="minute-container">
+            <p>Minuto(s)</p>
+            <h2 id="minute"></h2>
+          </div>
+          <p>:</p>
+          <div id="second-container">
+            <p>Segundo(s)</p>
+            <h2 id="second"></h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="description">
+        <h3>Inscreva-se para saber mais sobre o lançamento</h3>
+      </section>
+
+      <section class="subscription">
+        <button id="btnModal" class="btnSub">
+          <p>Inscreva-se</p>
+        </button>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-close">
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-header">
+              <h1>Inscreva-se</h1>
+              <p>Inscreva-se para saber mais sobre o lançamento</p>
+            </div>
+
+            <form action="https://submit-form.com/4v5dBSIa" method="post">
+              <div class="modal-form-name">
+                <label for="Name">Nome</label>
+                <input type="text" name="name" id="Name" placeholder="Nome Completo" autocomplete="off">
+              </div>
+              <div class="modal-form-email">
+                <label for="Email">E-mail</label>
+                <input type="text" name="email" id="Email" placeholder="E-mail (email@email.com.br)" autocomplete="off">
+              </div>
+              <button type="submit" class="modal-button" name="submit">
+                <p>Inscreva-se</p>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <aside>
+      <img src="./images/rocket.svg" alt="Foguete decolando para o espaço">
+    </aside>
+  </main>
+
+  <footer>
+    <img src="./images/bottom-image.svg" alt="Imagem de baixo da página">
+  </footer>
+</body>
+<script src="./js/script.js"></script>
+</html>

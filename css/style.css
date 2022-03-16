@@ -1,0 +1,297 @@
+:root {
+  --black: #4D4C59;
+  --white: #FFF;
+  --purple: #6C63FF;
+  --light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.countdown {
+  width: 494px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+
+  color: var(--purple);
+}
+
+.time-container {
+  width: 494px;
+  height: 99px;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#day-container,
+#hour-container,
+#minute-container,
+#second-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#day-container p,
+#hour-container p,
+#minute-container p,
+#second-container p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-transform: capitalize;
+
+  color: var(--light-grey);
+}
+
+#day-container h2,
+#hour-container h2,
+#minute-container h2,
+#second-container h2,
+.time p {
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 108px;
+
+  color: var(--black);
+}
+
+.time p {
+  padding-bottom: 6px;
+}
+
+.description {
+  margin: 46px auto 31px;
+}
+
+.description h3 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: var(--text-color);
+
+  text-align: center;
+}
+
+.subscription {
+  display: flex;
+  justify-content: center;
+}
+
+.btnSub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 46px;
+
+  background: var(--purple);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: filter
+}
+
+.btnSub:hover {
+  filter: brightness(0.8)
+}
+
+.btnSub p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--white);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background: url(../images/modalBg.svg) no-repeat;
+  width: 850px;
+  height: 450px;
+  margin: 9% auto;
+  box-shadow: -34px 36px 50px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+}
+
+.modal-close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  left: 781px;
+  top: 20px;
+  
+  background: var(--purple);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: filter 0.2s;
+}
+
+.close {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.modal-header {
+  margin-left: 40px;
+}
+
+.modal-header p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: var(--text-color);
+}
+
+form {
+  width: 486px;
+  height: 203px;
+  margin: 40px 0 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-form-name,
+.modal-form-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-name label,
+.modal-form-email label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 11px;
+
+  color: var(--text-color);
+} 
+
+.modal-form-name input,
+.modal-form-email input {
+  height: 40px;
+  border: 1px solid var(--text-color);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-left: 11px;
+
+  transition: border-color 0.2s;
+}
+
+.modal-form-name input:hover,
+.modal-form-email input:hover {
+  border-color: var(--purple);
+}
+
+.modal-form-name input:focus,
+.modal-form-email input:focus {
+  outline-color: var(--purple);
+}
+
+.modal-form-name input::placeholder,
+.modal-form-email input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 11px;
+
+  color: rgba(156, 154, 182, 0.6);
+}
+
+.modal-button {
+  width: 100%;
+  height: 46px;
+
+  background: var(--purple);
+  border: 0;
+  border-radius: 10px;
+
+  transition: filter 0.2s;
+}
+
+.modal-button p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+.modal-button:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
